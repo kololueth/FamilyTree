@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_add_member"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddMember">
+
+    <TextView
+        android:id="@+id/AddMember_Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Add Member"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Parents"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/parentGridView"
+        app:layout_constraintEnd_toEndOf="@+id/parentGridView"
+        app:layout_constraintStart_toStartOf="@+id/parentGridView" />
+
+    <GridView
+        android:id="@+id/childGridView"
+        android:layout_width="405dp"
+        android:layout_height="319dp"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:numColumns="5"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="25dp"
+        android:verticalSpacing="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/add_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parentGridView"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <GridView
+        android:id="@+id/parentGridView"
+        android:layout_width="300dp"
+        android:layout_height="143dp"
+        android:layout_marginTop="52dp"
+        android:gravity="center"
+        android:horizontalSpacing="20dp"
+        android:numColumns="2"
+        android:paddingHorizontal="25dp"
+        android:paddingVertical="25dp"
+        android:verticalSpacing="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/AddMember_Title" />
+
+    <TextView
+        android:id="@+id/child_label"
+        android:layout_width="100dp"
+        android:layout_height="20dp"
+        android:text="Children"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/childGridView"
+        app:layout_constraintEnd_toEndOf="@+id/childGridView"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="@+id/childGridView" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,156 @@
+    private void showParents(){
+
+
+ /*
+        parentGridView.setAdapter(new GridViewAdapter(getApplicationContext(), getDisplayParentSet(), getResources()));
+
+
+      parentGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+             @Override
+             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                 if(((TextView)view.findViewById(R.id.adapter_circle)).getText().equals("ADD")) {
+
+                     new AddMemberDialog().show(getSupportFragmentManager(), "Parent");
+
+                 } else {
+
+                     Toast toast = Toast.makeText(getApplicationContext(), "NEW PARENT", Toast.LENGTH_SHORT);
+                     toast.setMargin(50, 50);
+                     toast.show();
+
+                 } // End of if
+
+             }  // End of onItemClick
+
+         });  // End of OnItemClickListener
+
+        parentGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(!((TextView)view.findViewById(R.id.adapter_circle)).getText().equals("ADD")) {
+
+                    startActivity(new Intent(getApplicationContext(), MemberCard.class).putExtra("ParentIndex", position));
+
+                } // End of if
+
+                return false;
+
+            } // End of OnItemLongClick
+
+        }); // End of setOnItemLongClickListener
+
+*/
+
+
+
+
+    } // End of showParents
+
+    private void showChildren(){
+
+ /*       childGridView.setAdapter(new GridViewAdapter(getApplicationContext(), getDisplayChildSet(), getResources()));
+
+
+        childGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(((TextView)view.findViewById(R.id.adapter_circle)).getText().equals("ADD")) {
+
+                    new AddMemberDialog().show(getSupportFragmentManager(), "Child");
+
+                } else {
+
+                    Toast toast = Toast.makeText(getApplicationContext(), familyUnit.children.get(position).firstName, Toast.LENGTH_SHORT);
+                    toast.setMargin(50, 50);
+                    toast.show();
+
+                } // End of if
+
+            }  // End of onItemClick
+
+        });  // End of OnItemClickListener
+
+
+        childGridView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+
+                if(!((TextView)view.findViewById(R.id.adapter_circle)).getText().equals("ADD")) {
+
+                    startActivity(new Intent(getApplicationContext(), MemberCard.class).putExtra("ChildIndex", position));
+
+                } // End of if
+
+                return false;
+
+            } // End of onItemLongClick
+
+        }); // End of OnItemLongClickListener
+
+*/
+
+    } // End of showChildren
+
+
+
+        private FamilyUnit copyAuthenticTree(FamilyUnit familyUnit) {
+
+            ByteArrayOutputStream bos = new ByteArrayOutputStream();
+            ObjectOutputStream oos = null;
+
+            try {
+
+                oos = new ObjectOutputStream(bos);
+                oos.writeObject(familyUnit);
+                oos.flush();
+
+
+                ByteArrayInputStream bis = new ByteArrayInputStream(bos.toByteArray());
+
+                ObjectInputStream ois = new ObjectInputStream(bis);
+
+                return (FamilyUnit) ois.readObject();
+
+
+            } catch (IOException e) {
+
+                Log.d(TAG, e.toString());
+
+            } catch (ClassNotFoundException e) {
+
+                Log.d(TAG, e.toString());
+            }
+
+
+            Log.d(TAG, "BAD COPY");
+            return familyUnit;
+
+        } // End of copyAuthenticTree
+
+
+             /*
+
+            MemberJSONObject deleteMemberJSONObject = new MemberJSONObject(member);
+
+
+            try {
+
+                deleteMemberJSONObject.put("function", "Delete");
+
+                Log.d(TAG, deleteMemberJSONObject.toString());
+
+                new JSONRequestor(deleteMemberJSONObject, this).run();
+
+            } catch (JSONException e) {
+
+                e.printStackTrace();
+            }
+
+              */

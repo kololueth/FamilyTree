@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_member_card"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemberCard">
+
+    <TextView
+        android:id="@+id/memberCard_fullname"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="4dp"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/memberCard_birthdate"
+        android:layout_width="250dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="8dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberCard_fullname"
+        app:layout_constraintVertical_bias="0.033" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="174dp"
+        android:layout_height="169dp"
+        android:layout_marginTop="12dp"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberCard_childnumber"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/memberCard_birthdate_label"
+        android:layout_width="84dp"
+        android:layout_height="21dp"
+        android:text="birthdate"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/memberCard_birthdate"
+        app:layout_constraintEnd_toEndOf="@+id/memberCard_birthdate"
+        app:layout_constraintStart_toStartOf="@+id/memberCard_birthdate" />
+
+    <TextView
+        android:id="@+id/memberCard_middlename"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberCard_birthdate" />
+
+    <TextView
+        android:id="@+id/memberCard_dayofweek"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="44dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberCard_middlename" />
+
+    <TextView
+        android:id="@+id/memberCard_childnumber"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="middle name"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/memberCard_middlename"
+        app:layout_constraintEnd_toEndOf="@+id/memberCard_middlename"
+        app:layout_constraintStart_toStartOf="@+id/memberCard_middlename" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="day of week born on"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/memberCard_dayofweek"
+        app:layout_constraintEnd_toEndOf="@+id/memberCard_dayofweek"
+        app:layout_constraintStart_toStartOf="@+id/memberCard_dayofweek" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="child number"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/memberCard_childnumber"
+        app:layout_constraintEnd_toEndOf="@+id/memberCard_childnumber"
+        app:layout_constraintStart_toStartOf="@+id/memberCard_childnumber" />
+
+    <TextView
+        android:id="@+id/memberCard_nickname"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        app:layout_constraintBottom_toBottomOf="@+id/memberCard_middlename"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/memberCard_middlename"
+        app:layout_constraintTop_toTopOf="@+id/memberCard_middlename" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="nickname"
+        app:layout_constraintBottom_toTopOf="@+id/memberCard_nickname"
+        app:layout_constraintEnd_toEndOf="@+id/memberCard_nickname"
+        app:layout_constraintStart_toStartOf="@+id/memberCard_nickname" />
+
+    <Button
+        android:id="@+id/memberCard_delete_button"
+        android:layout_width="234dp"
+        android:layout_height="51dp"
+        android:backgroundTint="@android:color/holo_red_dark"
+        android:text="Delete"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/memberCard_dayofweek"
+        app:layout_constraintVertical_bias="0.806" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
